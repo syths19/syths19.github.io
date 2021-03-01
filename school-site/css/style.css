@@ -173,7 +173,7 @@ ol {
     list-style-type: lower-alpha;
 }
 
-.longlist a:hover {
+.long-list a:hover {
     text-transform: uppercase;
     
 }
