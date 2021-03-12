@@ -1,0 +1,348 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+/* Layout */
+
+
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+}
+
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 20px;
+    
+}
+
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    
+}
+
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: 2px solid black;
+    padding-left: 1rem;
+    
+    
+}
+aside p {
+    border-bottom: 2px solid black;
+    padding-bottom: 1rem;
+    
+    
+}
+.subsection {
+    display: flex;
+    margin: 2rem 0rem;
+    margin-top: 5rem;
+    
+}
+/* Links and Navigation */
+
+nav a {
+    display: inline-block;
+    padding: 1.25rem 2rem;
+    font-size: 1.25rem;
+    font-family: lato-regular,serif,sans-serif;
+    font-weight: bold;
+    color: #313C40;
+    margin-left: 1rem;
+    margin-right: 1rem;
+        
+    
+    
+    
+}
+nav {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    text-align: center;
+    
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+nav a:hover{
+    text-decoration: line-through;
+    transform: rotate(-5deg)
+}
+
+nav a:visited{
+    color: #732C2C;
+    
+}
+    
+nav a:hover a:visited{
+    text-decoration: line-through;
+    transform: rotate(-5deg)
+}
+
+
+
+button {
+    border: 1px #97A4A6;
+    background-color:darkslategrey;
+    font-size: 1.5rem;
+    font-family: ultra-regular;
+    color: white;
+    padding: .75rem;
+    border-radius: 10px;
+    letter-spacing: .125rem;
+    margin-top: 1.5rem;
+    box-shadow: 5px 5px 8px #888888;
+}
+
+
+
+/* Images and Figures*/
+
+img {
+    width: 100%;
+}
+
+.article-image {
+    width: 33%;
+    float: left;
+    margin-right: 1rem;
+    
+}
+
+figure {
+    margin: 0px;
+    
+}    
+.subsection figure{
+    margin-left: .5rem;
+    margin-right: .5rem;
+    
+    
+    
+    
+}
+figcaption {
+    background-color: beige;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: .5rem
+}
+
+/* Headers And Footers*/
+
+h1 {font-family: opensans-regular;
+    transform: rotate(350deg);
+    text-align: center;
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+    padding-top: .5rem;  
+    text-shadow:2px 2px 3px #333;
+    
+}
+
+h1 span{
+    background-color: #732C2C;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    font-family: ultra-regular;
+    letter-spacing: 3px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 5px 5px 8px #888888; 
+}
+
+h2{
+    font-family: lato-regular;
+    font-size: 1.5rem;
+}
+
+
+h3{
+    font-family: opensans-regular;
+    font-size: 1.25rem;
+}
+footer p{
+    float: right;
+}
+
+.copyright{
+    float: left;
+}
+
+/* Paragraph Styling*/
+
+p {
+    font-family: lato-regular,sans-serif,serif;
+    
+}
+.expand{
+    font-size: .65rem;
+}
+
+
+
+
+
+/* Imported Fonts*/
+
+@font-face{
+    font-family:"ultra-regular";
+    src: url("../fonts/serif/ultra-regular.ttf")
+    format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+    
+@font-face{
+    font-family:"rozhaone-regular";
+    src: url("../fonts/serif/rozhaone-regular.ttf")
+    format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+  
+@font-face{
+    font-family:"josefinslab-regular";
+    src: url("../fonts/serif/josefinslab-regular.ttf")
+    format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+  
+@font-face{
+    font-family:"robotoslab-regular";
+    src: url("../fonts/serif/robotoslab.ttf")
+    format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+  
+@font-face{
+    font-family:"lato-regular";
+    src: url("../fonts/sans-serif/lato-regular.ttf")
+    format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+  
+@font-face{
+    font-family:"montserrat-regular";
+    src: url("../fonts/sans-serif/montserrat-regular.ttf")
+    format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+  
+@font-face{
+    font-family:"opensans-regular";
+    src: url("../fonts/sans-serif/opensans-regular.ttf")
+    format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+  
+@font-face{
+    font-family:"roboto-regular";
+    src: url("../fonts/sans-serif/roboto-regular.ttf")
+    format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
